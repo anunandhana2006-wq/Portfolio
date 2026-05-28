@@ -64,15 +64,21 @@
 
   </div>
 </section>
-<section>
+<section id="certificates">
   <h2>Certificates</h2>
 
-  <ul>
-    <li>HTML & CSS Basics Certificate</li>
-    <li>Java Programming Basics Certificate</li>
-    <li>Web Development Beginner Certificate</li>
-  </ul>
+  <div class="cert-grid">
+    <img src="cert1.jpg" onclick="openCert(this.src)">
+    <img src="cert2.jpg" onclick="openCert(this.src)">
+    <img src="cert3.jpg" onclick="openCert(this.src)">
+    <img src="cert4.jpg" onclick="openCert(this.src)">
+  </div>
 </section>
+
+<!-- POPUP BOX -->
+<div id="popup" onclick="closeCert()">
+  <img id="popup-img">
+</div>
 
 <section id="contact">
   <h2>Contact</h2>
@@ -95,9 +101,17 @@
 </a>
 
   </div>
-</section>
+</section>                                      <script>
+function openCert(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-img").src = src;
+}
 
-  
+function closeCert() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+                                 
 </body>
 </html>
   
